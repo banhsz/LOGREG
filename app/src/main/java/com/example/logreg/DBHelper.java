@@ -43,4 +43,20 @@ public class DBHelper extends SQLiteOpenHelper
         db.execSQL(sql);
         onCreate(db);
     }
+
+    //KERESES
+    public Cursor adatKereses(String felhIn,String jelszoIn)
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        //paraméteres stringmegszakítós
+        //String nev ="Jozsi";
+        //return db.rawQuery("SELECT * FROM "+PALINKA_TABLE+" WHERE nev = ?",new String[]{fozoIn});
+
+        //fullos
+        String selection = "felhnev = ? and jelszo = ?";
+        String[] selectionArgs = {felhIn,jelszoIn};
+        return db.query(FELHASZNALO_TABLE,new String[]{COL_ID,COL_EMAIL,COL_FELHNEV,COL_JELSZO,COL_TELJESNEV},selection,selectionArgs,null,null,null,null);
+    }
+
+
 }
