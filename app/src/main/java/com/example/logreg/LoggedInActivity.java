@@ -32,7 +32,7 @@ public class LoggedInActivity extends AppCompatActivity
 
     private void onClickListeners()
     {
-        buttonKijelentkezes.setOnClickListener(new View.OnClickListener() 
+        buttonKijelentkezes.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
