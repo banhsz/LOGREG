@@ -58,5 +58,16 @@ public class DBHelper extends SQLiteOpenHelper
         return db.query(FELHASZNALO_TABLE,new String[]{COL_ID,COL_EMAIL,COL_FELHNEV,COL_JELSZO,COL_TELJESNEV},selection,selectionArgs,null,null,null,null);
     }
 
-
+    //INSERT
+    public boolean adatRogzites(String email,  String felhnev, String jelszo, String teljesnev)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COL_EMAIL, email);
+        values.put(COL_FELHNEV, felhnev);
+        values.put(COL_JELSZO, jelszo);
+        values.put(COL_TELJESNEV, teljesnev);
+        long result = db.insert(FELHASZNALO_TABLE, null, values);
+        return result != -1;
+    }
 }

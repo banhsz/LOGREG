@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             }
             else
             {
-                Toast.makeText(this, "Sikeres bejeltkezés.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Sikeres bejelentkezés.", Toast.LENGTH_SHORT).show();
             }
         }
     }

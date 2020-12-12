@@ -7,4 +7,50 @@
     tools:context=".RegisterActivity"
     android:orientation="vertical">
 
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textSize="25sp"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/editTextFelhasznalonev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Felhasználónév"
+        android:textSize="25sp"/>
+
+    <EditText
+        android:id="@+id/editTextJelszo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Jelszo"
+        android:textSize="25sp"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/editTextTeljesnev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Teljes név"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/buttonRegisztracio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Regisztráció"
+        android:textSize="25sp"
+        />
+
+    <Button
+        android:id="@+id/buttonVissza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vissza"
+        android:textSize="25sp"
+        />
+
 </LinearLayout>
