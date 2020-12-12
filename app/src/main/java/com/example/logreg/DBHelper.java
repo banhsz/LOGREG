@@ -53,8 +53,10 @@ public class DBHelper extends SQLiteOpenHelper
         //return db.rawQuery("SELECT * FROM "+PALINKA_TABLE+" WHERE nev = ?",new String[]{fozoIn});
 
         //fullos
-        String selection = "felhnev = ? and jelszo = ?";
-        String[] selectionArgs = {felhIn,jelszoIn};
+
+        //2. b. ii.
+        String selection = "(felhnev = ? or email = ?) and jelszo = ?";
+        String[] selectionArgs = {felhIn,felhIn,jelszoIn};
         return db.query(FELHASZNALO_TABLE,new String[]{COL_ID,COL_EMAIL,COL_FELHNEV,COL_JELSZO,COL_TELJESNEV},selection,selectionArgs,null,null,null,null);
     }
 
