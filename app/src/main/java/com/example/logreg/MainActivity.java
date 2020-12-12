@@ -84,6 +84,17 @@ public class MainActivity extends AppCompatActivity {
             else
             {
                 Toast.makeText(this, "Sikeres bejelentkezés.", Toast.LENGTH_SHORT).show();
+                Intent masikActivityre = new Intent(MainActivity.this, LoggedInActivity.class);
+
+                //Valódi név megszerzése
+                StringBuilder stringBuffer = new StringBuilder();
+                adatok.moveToNext();
+                stringBuffer.append(adatok.getString(4)+"");
+                String valodinev = stringBuffer.toString();
+
+                masikActivityre.putExtra("valodinev", valodinev);
+                startActivity(masikActivityre);
+                finish();
             }
         }
     }
